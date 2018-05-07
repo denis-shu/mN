@@ -3,3 +3,6 @@
 /typings
 /public/js/
 npm-debug.log
+webpack.config.common.js
+package.json
+webpack.config.dev.js
