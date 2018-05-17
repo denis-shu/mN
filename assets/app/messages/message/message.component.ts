@@ -1,21 +1,28 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Message } from '../messagemodel';
+import { Component, Input, Output } from "@angular/core";
+import { Message } from "../messagemodel";
+import { MessageService } from "../message.servoce";
 
 @Component({
-  selector: 'app-message',
-  templateUrl: './message.component.html',
-  styleUrls: ['./message.component.css']
+  selector: "app-message",
+  templateUrl: "./message.component.html",
+  styleUrls: ["./message.component.css"]
 })
-export class MessageComponent implements OnInit {
+export class MessageComponent {
   @Input() message: Message;
-  @Output() edit =  new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private messageService: MessageService) {}
 
-  ngOnInit() {
-  }
-  onEdit(){
-    this.edit.emit('A new Val');
+  onEdit() {
+    this.messageService.EditMessage(this.message);
   }
 
+  onDelete() {
+    this.messageService
+      .deleteMEssage(this.message)
+      .subscribe(res => console.log("1", res));
+  }
+
+  isUsers() {
+    return localStorage.getItem("userId") == this.message.userId;
+  }
 }
