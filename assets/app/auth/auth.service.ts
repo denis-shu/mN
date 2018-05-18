@@ -6,7 +6,7 @@ import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class AuthService {
-  private baseUrl = "https://mess.eu-central-1.elasticbeanstalk.com";
+  private baseUrl = "https://devasdaddn.herokuapp.com/";
 
   constructor(private http: Http) {}
   

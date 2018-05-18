@@ -7,7 +7,7 @@ import { Injectable, EventEmitter } from "@angular/core";
 @Injectable()
 export class MessageService {
   private messages: Message[] = [];
-  private baseUrl = "https://devmen.herokuapp.com";
+  private baseUrl = "https://devmsssen.herokuapp.com/";
   mesageIsEdit = new EventEmitter<Message>();
 
   constructor(private http: Http) {}

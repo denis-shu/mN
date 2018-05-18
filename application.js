@@ -11,7 +11,7 @@ var messageRoutes = require('./routes/message');
 var userRoutes = require('./routes/user');
 
 var app = express();
-mongoose.connect('mongodb://deniss:shum4545$@ds227740.mlab.com:27740/mnchat');
+mongoose.connect('mongodb://denssiss:s5$@ds227740.mlab.com:27740/mnchat');
 
 
 // view engine setup
