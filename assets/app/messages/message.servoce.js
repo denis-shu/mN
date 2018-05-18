@@ -7,7 +7,7 @@ var MessageService = /** @class */ (function () {
     function MessageService(http) {
         this.http = http;
         this.messages = [];
-        this.baseUrl = "http://localhost:3000";
+        this.baseUrl = "https://devmen.herokuapp.com";
         this.mesageIsEdit = new EventEmitter();
     }
     MessageService.prototype.addMessage = function (message) {

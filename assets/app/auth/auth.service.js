@@ -5,7 +5,7 @@ import { Observable } from "rxjs/Observable";
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
-        this.baseUrl = "https://devmen.herokuapp.com";
+        this.baseUrl = "https://mess.eu-central-1.elasticbeanstalk.com";
     }
     AuthService.prototype.signUp = function (user) {
         var body = JSON.stringify(user);
