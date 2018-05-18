@@ -6,7 +6,7 @@ import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class AuthService {
-  private baseUrl = "http://localhost:3000";
+  private baseUrl = "https://devmen.herokuapp.com";
 
   constructor(private http: Http) {}
   
